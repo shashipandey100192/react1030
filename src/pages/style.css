@@ -3,3 +3,17 @@
     color:red;
     font-size: 50px;
 }
+.navbar
+{
+    list-style: none;
+    display: flex;
+    height:50px;
+}
+.navbar>li
+{
+    padding: 5px;
+    flex:1;
+    margin:5px;
+    background-color:aqua;
+    text-align: center;
+}
