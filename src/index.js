@@ -1,20 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Gallery1 from './pages/Gallery';
-import Myhome, { Myhome2, Myhome1,Myhome3,Myhome4 } from './pages/Home';
-import Mynavbar from './pages/Mynav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Errorpage from './components/Errorpage';
+import Landingpage from './components/Landingpage';
+import Form1 from './components/listofform/Form1';
+import Form2 from './components/listofform/Form2';
+import Form3 from './components/listofform/Form3';
+import Myform from './components/Myform';
+import Navbar from './components/Navbar';
+import Service from './components/Service';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Gallery1/>
-<Mynavbar></Mynavbar>
-   <Myhome></Myhome>
-   <Myhome1></Myhome1>
-   <Myhome2/>
-   <Myhome3/>
-   <Myhome4 />
+   
+    <BrowserRouter>
+    <Navbar/>
+      <Routes>
+          <Route path='' element={<Landingpage/>}/>
+          <Route path='service' element={<Service/>}/>
+          <Route path='form' element={<Myform/>}/>
+            <Route path='form/form1' element={<Form1/>}/>
+            <Route path='form/form2' element={<Form2/>}/>
+            <Route path='form/form3' element={<Form3/>}/>
+          <Route path='*' element={<Errorpage/>}/>
+      </Routes>  
+        
+    </BrowserRouter>
   </React.StrictMode>
 );
 
