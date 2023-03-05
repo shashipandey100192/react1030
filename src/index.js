@@ -8,6 +8,7 @@ import Form2 from './components/listofform/Form2';
 import Form3 from './components/listofform/Form3';
 import Myform from './components/Myform';
 import Navbar from './components/Navbar';
+import Abc from './components/Page1';
 import Service from './components/Service';
 
 
@@ -25,6 +26,7 @@ root.render(
             <Route path='form/form2' element={<Form2/>}/>
             <Route path='form/form3' element={<Form3/>}/>
           <Route path='*' element={<Errorpage/>}/>
+          <Route path='page' element={<Abc/>}/>
       </Routes>  
         
     </BrowserRouter>
