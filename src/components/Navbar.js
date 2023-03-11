@@ -25,6 +25,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="page">classComponent</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="mystate">usestate</Link>
+            </li>
            
         </ul>
         </div>
