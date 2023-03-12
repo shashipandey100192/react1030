@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Mycondition from './Mycondition';
 
 function Myfunction() {
 
@@ -19,16 +20,41 @@ const mynumber = (e)=>{
 }
 
 
+const xyz= ()=>{
+  // alert("this is funcction");
+  console.log("hiii");
+}
+
+useEffect(()=>{
+  xyz();
+  console.log("hiimkljkkon");
+});
+
+
+const [x,y] =useState("red");
+const mycolor = (inputcolor)=>{
+    console.log(inputcolor.target.value);
+    y(inputcolor.target.value);
+}
+
+
 
   return (
-    <div>Myfunction
+  
+    // <div style={{color:'red','background-color':'green',fontSize:50}}>Myfunction
+    <>
+    <div style={{backgroundColor:`${x}`}}>Myfunction
         <h1>{a}</h1>
         <input type="button" onClick={abc} value="changestate" />
         <hr/>
-        <input type="number" onChange={mynumber}/>
+        <input type="number" onChange={mynumber} />
         <p>{inputval}</p>
         <input type="text" value={inputval+10} />
+
+    <input type="color" onChange={mycolor}></input>
     </div>
+     <Mycondition  value={inputval} />
+     </>
   )
 }
 
