@@ -28,6 +28,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="mystate">usestate</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="mydata">json data</Link>
+            </li>
            
         </ul>
         </div>

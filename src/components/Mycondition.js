@@ -20,7 +20,7 @@ let a = props.value;
         return <Myform />
     }
     else{
-        return alert("this is default");
+        // return alert("this is default");
     }
 
 

@@ -6,6 +6,7 @@ import Landingpage from './components/Landingpage';
 import Form1 from './components/listofform/Form1';
 import Form2 from './components/listofform/Form2';
 import Form3 from './components/listofform/Form3';
+import Mydata from './components/Mydata';
 import Myform from './components/Myform';
 import Myfunction from './components/Myfunction';
 import Navbar from './components/Navbar';
@@ -29,6 +30,7 @@ root.render(
           <Route path='*' element={<Errorpage/>}/>
           <Route path='page' element={<Abc/>}/>
           <Route path='mystate' element={<Myfunction/>}/>
+          <Route path='mydata' element={<Mydata/>}/>
       </Routes>  
         
     </BrowserRouter>
