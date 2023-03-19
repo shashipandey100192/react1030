@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Axiosapidata from './components/Axiosapidata';
 import Errorpage from './components/Errorpage';
 import Landingpage from './components/Landingpage';
 import Form1 from './components/listofform/Form1';
@@ -31,6 +32,8 @@ root.render(
           <Route path='page' element={<Abc/>}/>
           <Route path='mystate' element={<Myfunction/>}/>
           <Route path='mydata' element={<Mydata/>}/>
+          <Route path="axiosapi" element={<Axiosapidata/>}/>
+
       </Routes>  
         
     </BrowserRouter>

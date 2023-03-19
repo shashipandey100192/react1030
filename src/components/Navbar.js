@@ -31,6 +31,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="mydata">json data</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="axiosapi">axios</Link>
+            </li>
            
         </ul>
         </div>
