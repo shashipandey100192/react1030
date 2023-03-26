@@ -13,16 +13,26 @@ import Myfunction from './components/Myfunction';
 import Navbar from './components/Navbar';
 import Abc from './components/Page1';
 import Service from './components/Service';
+import { Auth0Provider } from '@auth0/auth0-react';
+import LoginButton1 from './components/Auth0login';
+import Storage1 from './components/Storage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   
+   <Auth0Provider
+    domain="dev-2lztdozl12hbrfpe.us.auth0.com"
+    clientId="ysE0Sv18qA9IzaKwWINfO6ENpY6zbzVI"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
     <BrowserRouter>
     <Navbar/>
       <Routes>
-          <Route path='' element={<Landingpage/>}/>
+          {/* <Route path='' element={<Landingpage/>}/> */}
+          <Route path='' element={<LoginButton1/>}/>
           <Route path='service' element={<Service/>}/>
           <Route path='form' element={<Myform/>}/>
             <Route path='form/form1' element={<Form1/>}/>
@@ -33,10 +43,11 @@ root.render(
           <Route path='mystate' element={<Myfunction/>}/>
           <Route path='mydata' element={<Mydata/>}/>
           <Route path="axiosapi" element={<Axiosapidata/>}/>
-
-      </Routes>  
-        
+          <Route path="storage" element={<Storage1/>}/>
+      </Routes>   
     </BrowserRouter>
+    </Auth0Provider>
+
   </React.StrictMode>
 );
 

@@ -34,6 +34,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="axiosapi">axios</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="storage">Storage</Link>
+            </li>
            
         </ul>
         </div>

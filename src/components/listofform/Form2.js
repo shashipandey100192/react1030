@@ -1,8 +1,9 @@
 import React from 'react'
 
 function Form2() {
+  const b = localStorage.getItem("mykey");
   return (
-    <div>form2</div>
+    <div>form2 {b}</div>
   )
 }
 
