@@ -1,10 +1,9 @@
 import axios from 'axios'
 import React, { Fragment, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-
+import { Link, useParams } from 'react-router-dom';
 
 function Axiosapidata() {
-
+let {id} = useParams();  
 const [mydata,mydatafunction]= useState([]);
 
 useEffect(()=>{   
@@ -32,6 +31,8 @@ axios.get('https://jsonplaceholder.typicode.com/comments').then((res)=>{
                     <Link to="#" class="btn btn-primary">{x.postId}</Link>
                     
                     <p>{x.userId}</p>
+                    
+                    <Link className='btn btn-warning btn-sm' to={`${x.id}`}>show details{x.id}</Link>
                 </div>
                 </div>
             </div>

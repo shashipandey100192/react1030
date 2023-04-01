@@ -37,6 +37,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="storage">Storage</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="fetchdata">Fetcgapi</Link>
+            </li>
            
         </ul>
         </div>

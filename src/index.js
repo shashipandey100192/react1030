@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Axiosapidata from './components/Axiosapidata';
 import Errorpage from './components/Errorpage';
 import Landingpage from './components/Landingpage';
@@ -16,10 +16,13 @@ import Service from './components/Service';
 import { Auth0Provider } from '@auth0/auth0-react';
 import LoginButton1 from './components/Auth0login';
 import Storage1 from './components/Storage';
-
+import Detailspage from './components/Detailspage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Myfatchpage from './components/Myfatchpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
    <Auth0Provider
     domain="dev-2lztdozl12hbrfpe.us.auth0.com"
@@ -29,6 +32,7 @@ root.render(
     }}
   >
     <BrowserRouter>
+    
     <Navbar/>
       <Routes>
           {/* <Route path='' element={<Landingpage/>}/> */}
@@ -44,6 +48,7 @@ root.render(
           <Route path='mydata' element={<Mydata/>}/>
           <Route path="axiosapi" element={<Axiosapidata/>}/>
           <Route path="storage" element={<Storage1/>}/>
+          <Route path="axiosapi/:id" element={<Detailspage/>}/>
       </Routes>   
     </BrowserRouter>
     </Auth0Provider>
