@@ -1,9 +1,8 @@
 import axios from 'axios'
 import React, { Fragment, useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
-function Axiosapidata() {
-let {id} = useParams();  
+function Axiosapidata() { 
 const [mydata,mydatafunction]= useState([]);
 
 useEffect(()=>{   

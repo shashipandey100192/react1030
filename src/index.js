@@ -19,6 +19,7 @@ import Storage1 from './components/Storage';
 import Detailspage from './components/Detailspage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Myfatchpage from './components/Myfatchpage';
+import Myfetchdataview from './components/Myfetchdataview';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -49,6 +50,8 @@ root.render(
           <Route path="axiosapi" element={<Axiosapidata/>}/>
           <Route path="storage" element={<Storage1/>}/>
           <Route path="axiosapi/:id" element={<Detailspage/>}/>
+          <Route path="fetchdata" element={<Myfatchpage/>}/>
+          <Route path="fetchdata/:id" element={<Myfetchdataview/>}/>
       </Routes>   
     </BrowserRouter>
     </Auth0Provider>
