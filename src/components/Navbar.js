@@ -40,6 +40,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="fetchdata">Fetcgapi</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="myredux">redux</Link>
+            </li>
            
         </ul>
         </div>

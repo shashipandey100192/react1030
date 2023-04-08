@@ -20,11 +20,15 @@ import Detailspage from './components/Detailspage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Myfatchpage from './components/Myfatchpage';
 import Myfetchdataview from './components/Myfetchdataview';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Myredux } from './components/Myreduxpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
+  <Provider store={store}>
    <Auth0Provider
     domain="dev-2lztdozl12hbrfpe.us.auth0.com"
     clientId="ysE0Sv18qA9IzaKwWINfO6ENpY6zbzVI"
@@ -52,10 +56,11 @@ root.render(
           <Route path="axiosapi/:id" element={<Detailspage/>}/>
           <Route path="fetchdata" element={<Myfatchpage/>}/>
           <Route path="fetchdata/:id" element={<Myfetchdataview/>}/>
+          <Route path="myredux" element={<Myredux/>}/>
       </Routes>   
     </BrowserRouter>
     </Auth0Provider>
-
+    </Provider>
   </React.StrictMode>
 );
 
