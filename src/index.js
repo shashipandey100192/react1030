@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import Axiosapidata from './components/Axiosapidata';
@@ -24,6 +24,10 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { Myredux } from './components/Myreduxpage';
 
+const  Myloadingpage = lazy(()=> import('./components/Mylazyloadingpage'));
+const Myloader = lazy(()=> import('./components/Myloaderdesign'));
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
@@ -31,7 +35,7 @@ root.render(
   <Provider store={store}>
    <Auth0Provider
     domain="dev-2lztdozl12hbrfpe.us.auth0.com"
-    clientId="ysE0Sv18qA9IzaKwWINfO6ENpY6zbzVI"
+    clientId="WDIMkCDYVGIgf5x0ek4qjmmVDzFiQaNZ"
     authorizationParams={{
       redirect_uri: window.location.origin
     }}
@@ -47,7 +51,6 @@ root.render(
             <Route path='form/form1' element={<Form1/>}/>
             <Route path='form/form2' element={<Form2/>}/>
             <Route path='form/form3' element={<Form3/>}/>
-          <Route path='*' element={<Errorpage/>}/>
           <Route path='page' element={<Abc/>}/>
           <Route path='mystate' element={<Myfunction/>}/>
           <Route path='mydata' element={<Mydata/>}/>
@@ -57,6 +60,11 @@ root.render(
           <Route path="fetchdata" element={<Myfatchpage/>}/>
           <Route path="fetchdata/:id" element={<Myfetchdataview/>}/>
           <Route path="myredux" element={<Myredux/>}/>
+          <Route path='mylazy' element={<Suspense fallback={<Myloader/>}>
+              <Myloadingpage></Myloadingpage>
+          </Suspense>}>
+          </Route>
+          <Route path='*' element={<Errorpage/>}/>
       </Routes>   
     </BrowserRouter>
     </Auth0Provider>

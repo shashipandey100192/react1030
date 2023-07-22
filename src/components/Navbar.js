@@ -43,6 +43,9 @@ function Navbar() {
             <li className="nav-item">
             <Link className="nav-link" to="myredux">redux</Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="mylazy">lazyloading</Link>
+            </li>
            
         </ul>
         </div>
